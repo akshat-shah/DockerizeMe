@@ -1,5 +1,5 @@
 #!/bin/bash
-docker build -t ashah7/"$1" .
-docker login -u="ashah7" -p="Docker3001."
-docker push ashah7/"$1"
-docker rmi $(docker images -q);
+sudo docker build -t ashah7/"$1" .
+sudo docker login -u="ashah7" -p="Docker3001."
+sudo docker push ashah7/"$1"
+sudo docker rmi $(docker images -q);
