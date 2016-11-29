@@ -33,7 +33,7 @@ builder.baseinstallcommands = {
 builder.packageinstallcommands = {
 	"npm":"RUN sudo apt-get install -y npm\nCOPY . /src\nRUN cd /src;sudo npm install\n",
 	"maven":"RUN sudo apt-get install -y maven\nCOPY . /src\n",
-	"pip_requirements":"COPY . /src\nRUN cd /src;pip install -r requirements.txt\n"
+	"pip_requirements":"COPY . /src\nRUN cd /src;sudo pip install -r requirements.txt\n"
 }
 
 builder.languageindicator = {
@@ -50,7 +50,7 @@ builder.secondaryinstallcommands = {
 builder.secondarypackageinstallcommands = {
 	"npm":"RUN cd /src;sudo npm install\n",
 	"maven":"RUN sudo apt-get install -y maven\n",
-	"pip_requirements":"RUN cd /src;pip install -r requirements.txt\n"
+	"pip_requirements":"RUN cd /src; sudopip install -r requirements.txt\n"
 }
 
 exports.builder = builder;
