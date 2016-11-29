@@ -50,7 +50,7 @@ builder.secondaryinstallcommands = {
 builder.secondarypackageinstallcommands = {
 	"npm":"RUN cd /src;sudo npm install\n",
 	"maven":"RUN sudo apt-get install -y maven\n",
-	"pip_requirements":"RUN cd /src; sudopip install -r requirements.txt\n"
+	"pip_requirements":"RUN cd /src; sudo pip install -r requirements.txt\n"
 }
 
 exports.builder = builder;
